@@ -4,8 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
+
 #ifndef EVALUATOR_H
 #define EVALUATOR_H
+
+ 
 
 int evaluation(astnode *node);
 

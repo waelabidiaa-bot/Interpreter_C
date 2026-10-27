@@ -12,6 +12,9 @@
 
 
 
+
+
+
 int main() {
     char s[MAX_LENGTH];
     printf("starting.....\n");

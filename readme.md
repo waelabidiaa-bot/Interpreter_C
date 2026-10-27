@@ -11,10 +11,18 @@ still learning i hope i continue this project it needs organizing tbh but hey it
 - Evaluates expressions
 - Detects basic syntax errors
 - Frees allocated memory
+- Stores and sets variables
 
 ## Supported operators
 
 `+`, `-`, `*`, `/`
+
+## Declaring variables
+```
+let x = 10
+x+10
+20
+```
 
 
 
