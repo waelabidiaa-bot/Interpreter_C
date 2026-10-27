@@ -13,8 +13,13 @@ int evaluation(astnode *node){
         return (int)strtol(node->value,NULL,10);
 
     }
+    
+    
     int left=evaluation(node->left);
     int right=evaluation(node->right);
+    if (strcmp(node->type,"unary")==0){
+        return -evaluation(node->right);
+    }
 
     if (strcmp(node->type,"operator")==0){
         if(strcmp(node->value,"+")==0){

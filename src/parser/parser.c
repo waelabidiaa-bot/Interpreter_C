@@ -14,6 +14,22 @@ astnode *parse_factor(Token **current){
         return NULL;
 
     }
+    if(strcmp((*current)->value,"-")==0){
+        *current = advance(*current);
+
+        astnode *operand = parse_factor(current);
+        if (operand == NULL){
+            return NULL;
+        }
+
+        astnode *node =  create_node("unary","-");
+        if (node == NULL){
+            return NULL;
+
+        }
+        node->right = operand;
+        return node;
+    }
     if(strcmp((*current)->type,"punct")==0 && strcmp((*current)->value,"(")==0){
         
         
@@ -40,6 +56,7 @@ astnode *parse_factor(Token **current){
         return node;
 
     }
+    
     printf("parser error: expected number or identifier ,but got '%s'\n",(*current)->value);
     return NULL;
     
@@ -103,6 +120,7 @@ astnode *parse_expression(Token **current){
         return NULL;
 
     }
+    
     while(*current!=NULL && (strcmp((*current)->value,"+")==0 || strcmp((*current)->value,"-")==0  )){
         astnode *operator_node = create_node((*current)->type,(*current)->value);
         if (operator_node == NULL) {
