@@ -4,11 +4,11 @@
 #include <ctype.h>  
 #include <stdbool.h>
 
-#include "internal/tokens/token.h"
-#include "internal/ast/astnode.h"
-#include "internal/parser/parser.h"
-#include "internal/evaluator/evaluator.h"
-#include "internal/lexer/lex.h"
+#include "tokens/token.h"
+#include "ast/astnode.h"
+#include "parser/parser.h"
+#include "evaluator/evaluator.h"
+#include "lexer/lex.h"
 
 
 

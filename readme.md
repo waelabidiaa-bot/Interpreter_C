@@ -22,14 +22,14 @@ still learning i hope i continue this project it needs organizing tbh but hey it
 
 Compile:
 
-```bash
-gcc main.c -o main
+```
+make
 ```
 
 Run:
 
 ```bash
-./main
+./bin/interpter_inC
 ```
 
 ## What's next
